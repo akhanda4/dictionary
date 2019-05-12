@@ -1,0 +1,58 @@
+.App {
+}
+
+.App-logo {
+  color: #ffffff;
+  display: inline-block;
+  padding: 10px;
+  height: 8vmin;
+}
+
+.App-header {
+  background-color: #379cf2;
+  min-height: 100vh;
+  color: white;
+}
+.input-group{
+  width: 380px!important;
+  margin:auto;
+  height: auto;
+
+  border:none!important;
+}
+.input-group-text{
+  background-color:#140f3b!important;
+  color: white!important;
+  border:none!important;
+  border-top-left-radius: 3px!important;
+  border-bottom-left-radius: 3px!important;
+}
+.form-control{
+  border:none!important;
+}
+#inputGroupFileAddon04{
+    background-color: #dcdcdc;
+    color: white;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border:none;
+}
+.fa-search{
+    color: #e86115;
+    background-color: #dcdcdc;
+}
+.fa-volume-up{
+  cursor: pointer;
+  color: blue;
+  margin:5px;
+  font-size: 20px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
