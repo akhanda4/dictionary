@@ -1,6 +1,10 @@
 .container {
   /* display: none; */
   text-align: center;
+  font-size: 1.8vh;
+}
+#def {
+  font-weight: bolder !important;
 }
 .col-2 {
   position: relative;

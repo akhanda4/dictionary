@@ -7,7 +7,29 @@ import ContentArea from "./components/ContentArea.jsx";
 import "./css/ContentArea.css";
 import "./css/SearchArea.css";
 class App extends React.Component {
-  state = { dataObject: "null" };
+  state = {
+    dataObject: [
+      {
+        id: "",
+        lexicalEntries: [
+          {
+            pronunciations: [{ audioFile: "" }],
+            entries: [
+              {
+                senses: [
+                  {
+                    definitions: [],
+                    examples: [{ text: "" }],
+                    subsenses: [{ definitions: "" }]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  };
 
   componentWillMount1 = word => {
     let app_id = "b66ffa30";
@@ -28,9 +50,9 @@ class App extends React.Component {
       }
     };
     axios(url, config).then(response => {
-      console.log(response);
+      //console.log(response);
       this.setState({
-        dataObject: response.data
+        dataObject: response.data.results
       });
     });
   };
