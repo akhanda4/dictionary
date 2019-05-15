@@ -1,5 +1,4 @@
 .container {
-  /* display: none; */
   text-align: center;
   font-size: 1.8vh;
 }
@@ -58,7 +57,7 @@
 .text-area {
   margin: auto;
   overflow: auto;
-  width: 378px;
+  width: 370px;
   height: 400px;
   background-color: #fff;
   padding: 10px;

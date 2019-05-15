@@ -8,6 +8,7 @@ import "./css/ContentArea.css";
 import "./css/SearchArea.css";
 class App extends React.Component {
   state = {
+    error: 0,
     dataObject: [
       {
         id: "",
@@ -42,27 +43,49 @@ class App extends React.Component {
       lang +
       "/" +
       word;
-    console.log(url);
     let config = {
       headers: {
         app_id: app_id,
         app_key: app_key
       }
     };
-    axios(url, config).then(response => {
-      //console.log(response);
-      this.setState({
-        dataObject: response.data.results
+    axios(url, config)
+      .then(response => {
+        this.setState({
+          dataObject: response.data.results,
+          error: 0
+        });
+      })
+      .catch(error => {
+        console.log(error);
+        this.setState({
+          error: 1
+        });
+        console.log(this.state.error);
       });
-    });
   };
+
   render() {
+    const a =
+      this.state.error === 1 ? (
+        <div className="container">
+          <div className="rr disable-select">
+            <button className="aba">Noun</button>
+            <button className="aba">Verb</button>
+          </div>
+          <div className="text-area">
+            <p>No Exact matches found for your query</p>
+          </div>
+        </div>
+      ) : (
+        <ContentArea data={this.state.dataObject} />
+      );
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <SearchArea search={this.componentWillMount1} />
-          <ContentArea data={this.state.dataObject} />
+          {a};
         </header>
       </div>
     );

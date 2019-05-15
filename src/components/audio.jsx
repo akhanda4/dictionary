@@ -9,10 +9,12 @@ class Audio extends Component {
         <React.Fragment>
           <i
             className="fa fa-volume-up"
-            onClick={() => document.getElementById("audio").play()}
+            onClick={() => {
+              document.getElementById("pro").play();
+            }}
           />
-          <audio id="audio">
-            <source type="audio/mpeg" src={this.props.data} />
+          <audio id="pro">
+            <source src={this.props.data} />
           </audio>
         </React.Fragment>
       );

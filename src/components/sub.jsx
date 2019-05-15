@@ -4,10 +4,10 @@ class Sub extends Component {
   render() {
     const subsenses = this.props.subsenses;
     const rows = subsenses ? (
-      subsenses.map((row, index) => {
+      subsenses.map((row, index2) => {
         return (
           <span>
-            <li className="def" key={index}>
+            <li className="def" key={index2}>
               {row.definitions}
             </li>
           </span>

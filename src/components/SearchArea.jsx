@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ContentArea from "./ContentArea.jsx";
 class searchArea extends Component {
   constructor(props) {
     super(props);

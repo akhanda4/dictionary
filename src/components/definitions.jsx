@@ -11,7 +11,7 @@ class Definition extends Component {
         <li key={index}>
           <span>{row.definitions} </span>
           <Example example={row.examples} />
-          {console.log(row.subsenses)}
+
           <Sub subsenses={row.subsenses} />
         </li>
       );

@@ -4,10 +4,10 @@ class Example extends Component {
   render() {
     const example = this.props.example;
     const rows = example ? (
-      example.map((row, index) => {
+      example.map((row, index1) => {
         return (
           <span id="itl">
-            <li key={index}>'{row.text}'</li>
+            <li key={index1}>'{row.text}'</li>
           </span>
         );
       })
